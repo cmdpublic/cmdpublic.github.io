@@ -64,14 +64,12 @@ html, body {
 }
 
 .centerimg {
-	display: grid;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 100px;
-	padding-right: 100px;
-	width: 20%;
-	height: 20%;
+	display: block;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 40%;
+	height: 40%;
 }
 
 /*link colors*/
@@ -159,6 +157,8 @@ details {
 	align-items: center;
 	align-content: center;
 	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 
