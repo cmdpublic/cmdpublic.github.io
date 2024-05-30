@@ -49,8 +49,10 @@ a:hover {
 }
 
 .vertli {
-    display: grid;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    position: fixed;
     inset: 0px;
     width: fit-content;
     height: fit-content;
