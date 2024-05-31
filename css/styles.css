@@ -5,34 +5,116 @@
     src: url("./fonts/AVONE.woff") format("woff");
 }
 
-body {
+p {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-family: 'avone';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15vw;
+    text-align: center;
+    color: white;
+    transform: scale(1.2, 0.7);
+    padding-left: 40%;
+    margin: 0;
+    margin-right: 17vw;
+    
+}
+
+body.main {
     background-color: black;
     background-image: url("../img/mainbg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
     min-height: 100vh;
+    overflow: hidden;
 }
 
-a:link {
+body.info {
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.vl {
+    border-left: 1px solid white;
+    height: 80vh;
+    position: absolute;
+    left: 40%;
+    margin-left: -3px;
+    top: 10%;
+}
+
+.horizontalLine {
+    border-bottom: 1px solid white;
+    width: 80vw;
+    position: fixed;
+    bottom: 70%;
+    margin-bottom: -3px;
+    margin-left: 10vw;
+    margin-right: auto;
+}
+
+a.main:link {
 	color: white;
     text-decoration: none;
     letter-spacing: -1px;
     line-height: 75%;
 }
 
-a:visited {
+a.main:visited {
 	color: white;
     text-decoration: none;
 }
 
-a:active {
+a.main:active {
 	color: white;
     text-decoration: none;
 }
 
-a:hover { 
+a.main:hover { 
+	transform: scale(1.2);
+    transition: transform .2s;
+    color: black;
+    background-color: white;
+}
+
+a.close {
+    font-family: 'avone';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2vw;
+    margin-top: 20vw;
+    margin-bottom: auto;
+    margin-left: 10vw;
+    margin-right: auto;
+}
+
+a.close:link {
+    color: white;
+    text-decoration: none;
+    letter-spacing: -1px;
+    line-height: 75%;
+}
+
+a.close:visited {
+	color: white;
+    text-decoration: none;
+}
+
+a.close:active {
+	color: white;
+    text-decoration: none;
+}
+
+a.close:hover { 
 	transform: scale(1.2);
     transition: transform .2s;
     color: black;
@@ -84,3 +166,60 @@ a:hover {
     width: 10vw;
     height: 10vw;
 }
+
+.lmainreveal {
+    animation: ltransition 1s;
+}
+
+.rmainreveal {
+    animation: rtransition 1s;
+}
+
+@keyframes ltransition {
+    from {
+        opacity: 0;
+        transform: scale(0.6,0.9) perspective(10cm) rotateY(0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(0.7,1.1) perspective(20cm) rotateY(40deg);
+
+    }
+}
+
+@keyframes rtransition {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bgtransition {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* loader
+
+#startloader{
+    background: black url("") no-repeat center center;
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+*/
