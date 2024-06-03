@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'avone' serif;
+    src: url("./fonts/AVONE.ttf") format("ttf");
+    src: url("./fonts/AVONE.otf") format("otf");
+    src: url("./fonts/AVONE.woff") format("woff");
+}
+
+body {
+    background-color: black;
+    background-image: url("../img/mainbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100dvh;
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 20dvw 20dvw 20dvw 20dvw 20dvw;
+    grid-template-rows: 10dvh 80dvh 10dvh;
+}
+
+.menu-grid {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    justify-self: start;
+    align-self: center;
+}
+
+.icon-grid {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    justify-self: start;
+    align-self: center;
+
+}
+
+.titlefont {
+    font-family: 'avone';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 6dvw;
+    text-align: left;
+    transform: scale(0.7,1.1) perspective(70dvh) rotateY(30deg);
+}
+
+.vertli {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 25dvw;
+    margin-right: auto;
+}
+
+.mainicoresize {
+    width: 10dvw;
+    height: 10dvw;
+}
+
+a:link {
+	color: white;
+    text-decoration: none;
+    letter-spacing: -1px;
+    line-height: 75%;
+}
+
+a:visited {
+	color: white;
+    text-decoration: none;
+}
+
+a:active {
+	color: white;
+    text-decoration: none;
+}
+
+a:hover { 
+	transform: scale(1.2);
+    transition: transform .2s;
+    color: black;
+    background-color: white;
+}
+
+.lmainreveal {
+    animation: ltransition 1s;
+}
+
+.rmainreveal {
+    animation: rtransition 1s;
+}
+
+
+@keyframes ltransition {
+    from {
+        opacity: 0;
+        transform: scale(0.6,0.9) perspective(10cm) rotateY(0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(0.7,1.1) perspective(70dvh) rotateY(30deg);
+
+    }
+}
+
+@keyframes rtransition {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
